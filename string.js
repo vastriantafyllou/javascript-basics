@@ -1,4 +1,6 @@
 let str = "Coding Factory"
+//spread operator
+console.log(...str)
 
 
 // parse
