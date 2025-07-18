@@ -41,3 +41,35 @@ const removeDuplicates = (arr) => {
 }
 
 console.log(removeDuplicates(arr))
+
+const chunkArray = function(arr, size) {
+      const chunks = []
+      
+      for(let i = 0; i < arr.length; i += size) {
+        chunks.push(arr.slice(i, i + size))
+      }
+      return chunks
+}
+
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+console.log(chunkArray(array, 2))
+
+
+const arrayCommonEl = function(arr1, arr2) {
+    let newCommonArray = []
+
+   const mySet = new Set(arr1)
+
+    for (let i = 0; i < arr2.length; i++)
+     if (mySet.has(arr2[i])) {
+        newCommonArray.push(arr2[i])
+     }
+    return [...new Set(newCommonArray)]
+}
+const arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+const arr2 = [1, 2, 2, 4, 5, 6, 6, 8, 10]
+
+console.log(arrayCommonEl(arr1, arr2))
+
+
+ 
